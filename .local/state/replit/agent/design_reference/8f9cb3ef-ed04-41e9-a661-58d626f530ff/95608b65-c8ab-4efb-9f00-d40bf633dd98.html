@@ -1,0 +1,575 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Flow - Your Partner in Trusted Power Engineering Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'grid-blue': '#2563EB',
+                        'grid-dark-blue': '#1E40AF',
+                        'grid-gray': '#4B5563',
+                        'grid-light-gray': '#F9FAFB',
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+
+<body class="font-inter bg-white">
+    <!-- @COMPONENT: Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo - exactly as specified in requirements -->
+                <div class="flex-shrink-0">
+                    <div class="text-xl font-bold text-grid-dark-blue">Grid Flow</div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#" class="text-grid-gray hover:text-grid-blue px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                        <a href="#services" class="text-grid-gray hover:text-grid-blue px-3 py-2 text-sm font-medium transition-colors">Services</a>
+                        <a href="#about" class="text-grid-gray hover:text-grid-blue px-3 py-2 text-sm font-medium transition-colors">About</a>
+                        <a href="#projects" class="text-grid-gray hover:text-grid-blue px-3 py-2 text-sm font-medium transition-colors">Projects</a>
+                        <a href="#contact" class="text-grid-gray hover:text-grid-blue px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+                        <button class="bg-grid-blue text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-grid-dark-blue transition-colors">Get Quote</button>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-grid-gray hover:text-grid-blue focus:outline-none focus:ring-2 focus:ring-inset focus:ring-grid-blue" data-event="click:toggleMobileMenu">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="#" class="text-grid-gray hover:text-grid-blue block px-3 py-2 text-base font-medium">Home</a>
+                <a href="#services" class="text-grid-gray hover:text-grid-blue block px-3 py-2 text-base font-medium">Services</a>
+                <a href="#about" class="text-grid-gray hover:text-grid-blue block px-3 py-2 text-base font-medium">About</a>
+                <a href="#projects" class="text-grid-gray hover:text-grid-blue block px-3 py-2 text-base font-medium">Projects</a>
+                <a href="#contact" class="text-grid-gray hover:text-grid-blue block px-3 py-2 text-base font-medium">Contact</a>
+                <button class="w-full text-left bg-grid-blue text-white px-3 py-2 rounded-md text-base font-medium hover:bg-grid-dark-blue transition-colors mt-2">Get Quote</button>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- @COMPONENT: Hero Section -->
+    <section class="relative h-screen flex items-center justify-center">
+        <!-- Power generation facility with turbines and electrical infrastructure at sunset -->
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080');"></div>
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        
+        <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Your Partner in Trusted<br>
+                <span class="text-blue-400">Power Engineering Solutions</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
+                Delivering comprehensive electrical infrastructure and power systems engineering with over two decades of industry expertise.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-grid-blue hover:bg-grid-dark-blue text-white px-8 py-4 rounded-md font-semibold text-lg transition-colors" data-event="click:handleGetStarted">
+                    Get Started Today
+                </button>
+                <button class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-md font-semibold text-lg transition-colors" data-event="click:handleLearnMore">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: Engineering Consulting Section -->
+    <section class="py-20 bg-grid-light-gray" id="about">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-grid-dark-blue mb-6">Engineering Consulting</h2>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        Our expert team of power engineers combines decades of experience with cutting-edge technology to deliver comprehensive solutions for your electrical infrastructure needs. From initial concept through final implementation, we provide trusted engineering consulting that ensures optimal performance and reliability.
+                    </p>
+                    <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                        We specialize in power generation, transmission, distribution systems, and renewable energy integration. Our proven track record spans across industrial, commercial, and utility-scale projects.
+                    </p>
+                    <button class="bg-grid-blue hover:bg-grid-dark-blue text-white px-6 py-3 rounded-md font-semibold transition-colors" data-event="click:handleReadMore">
+                        Read More
+                    </button>
+                </div>
+                <div class="relative">
+                    <!-- Oil pump jack silhouette against dramatic sunset sky -->
+                    <img src="https://pixabay.com/get/ge3b244b066d61bc03cc4fa3c0623788e05884a3ce1d53715ba642f09dc6485f2ba1369c221a0a21d799728689d1d6c916847f1f4a83221eb85b13790db79dc42_1280.jpg" alt="Oil pump jack at sunset representing power engineering infrastructure" class="rounded-xl shadow-lg w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Engineering Consulting Section -->
+
+    <!-- @COMPONENT: Services Section -->
+    <section class="py-20 bg-white" id="services">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-grid-dark-blue mb-4">Comprehensive Power Engineering Services</h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+                    From concept to completion, we provide end-to-end power engineering solutions tailored to your specific requirements and industry standards.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Service Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
+                    <!-- Professional electrical engineer in hard hat reviewing technical drawings -->
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" alt="Electrical engineer reviewing technical drawings" class="w-full h-48 object-cover rounded-lg mb-6">
+                    <h3 class="text-xl font-bold text-grid-dark-blue mb-4">Electrical Engineering</h3>
+                    <ul class="text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>Power system design</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>Load flow analysis</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>Protection coordination</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>Arc flash studies</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>Power quality assessment</li>
+                    </ul>
+                    <button class="text-grid-blue hover:text-grid-dark-blue font-semibold transition-colors" data-event="click:handleServiceInquiry">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
+                    <!-- Industrial power substation with transformers and electrical equipment -->
+                    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" alt="Industrial power substation with transformers" class="w-full h-48 object-cover rounded-lg mb-6">
+                    <h3 class="text-xl font-bold text-grid-dark-blue mb-4">Infrastructure Design</h3>
+                    <ul class="text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>Substation design</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>Transmission lines</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>Distribution networks</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>SCADA systems</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>Grid modernization</li>
+                    </ul>
+                    <button class="text-grid-blue hover:text-grid-dark-blue font-semibold transition-colors" data-event="click:handleServiceInquiry">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
+                    <!-- Modern wind turbines and solar panels in sustainable energy facility -->
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" alt="Wind turbines and solar panels renewable energy facility" class="w-full h-48 object-cover rounded-lg mb-6">
+                    <h3 class="text-xl font-bold text-grid-dark-blue mb-4">Renewable Integration</h3>
+                    <ul class="text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>Solar system design</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>Wind farm integration</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>Energy storage systems</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>Grid interconnection</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mr-2 mt-1"></i>Microgrid solutions</li>
+                    </ul>
+                    <button class="text-grid-blue hover:text-grid-dark-blue font-semibold transition-colors" data-event="click:handleServiceInquiry">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Additional Services Row -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service Card 4 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
+                    <!-- Industrial manufacturing facility with electrical equipment and machinery -->
+                    <img src="https://pixabay.com/get/g82248756313a39d3a2f258073d2c729996f0c4ec750bb1bd42955e834a2d8dbc3d4bbda5b9971b50ba13563d2a5a716ee0ec990fd03e5d123ff7ef2002d756ad_1280.jpg" alt="Industrial manufacturing facility with electrical systems" class="w-full h-48 object-cover rounded-lg mb-6">
+                    <h3 class="text-xl font-bold text-grid-dark-blue mb-4">Industrial Projects</h3>
+                    <p class="text-gray-600 mb-4">
+                        Comprehensive electrical solutions for manufacturing, processing, and industrial facilities with focus on efficiency and safety.
+                    </p>
+                    <ul class="text-gray-600 space-y-1 text-sm mb-4">
+                        <li>• Motor control centers</li>
+                        <li>• Process automation</li>
+                        <li>• Safety systems</li>
+                    </ul>
+                    <button class="text-grid-blue hover:text-grid-dark-blue font-semibold transition-colors" data-event="click:handleServiceInquiry">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
+                    <!-- Engineers working on construction site with electrical infrastructure -->
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" alt="Engineers working on electrical infrastructure construction site" class="w-full h-48 object-cover rounded-lg mb-6">
+                    <h3 class="text-xl font-bold text-grid-dark-blue mb-4">Construction Support</h3>
+                    <p class="text-gray-600 mb-4">
+                        End-to-end construction support from design validation through commissioning and testing of electrical systems.
+                    </p>
+                    <ul class="text-gray-600 space-y-1 text-sm mb-4">
+                        <li>• Project management</li>
+                        <li>• Quality assurance</li>
+                        <li>• Commissioning services</li>
+                    </ul>
+                    <button class="text-grid-blue hover:text-grid-dark-blue font-semibold transition-colors" data-event="click:handleServiceInquiry">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
+                    <!-- Engineers with safety equipment reviewing electrical systems and blueprints -->
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" alt="Engineers reviewing electrical systems with safety equipment" class="w-full h-48 object-cover rounded-lg mb-6">
+                    <h3 class="text-xl font-bold text-grid-dark-blue mb-4">Safety & Compliance</h3>
+                    <p class="text-gray-600 mb-4">
+                        Comprehensive safety assessments and regulatory compliance services to ensure your systems meet all industry standards.
+                    </p>
+                    <ul class="text-gray-600 space-y-1 text-sm mb-4">
+                        <li>• Safety audits</li>
+                        <li>• Code compliance</li>
+                        <li>• Risk assessments</li>
+                    </ul>
+                    <button class="text-grid-blue hover:text-grid-dark-blue font-semibold transition-colors" data-event="click:handleServiceInquiry">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Services Section -->
+
+    <!-- @COMPONENT: Experience & Portfolio Section -->
+    <section class="py-20 bg-grid-light-gray" id="projects">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-grid-dark-blue mb-6">Experience & Portfolio</h2>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        With over 20 years of experience in power engineering, our team has successfully delivered hundreds of projects across various industries and scales. From small commercial installations to large utility-scale infrastructure projects.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-grid-blue mb-2" data-bind="stats.projects">500+</div>
+                            <div class="text-gray-600">Projects Completed</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-grid-blue mb-2" data-bind="stats.experience">20+</div>
+                            <div class="text-gray-600">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-grid-blue mb-2" data-bind="stats.clients">200+</div>
+                            <div class="text-gray-600">Satisfied Clients</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-grid-blue mb-2" data-bind="stats.mw">5000+</div>
+                            <div class="text-gray-600">MW Installed</div>
+                        </div>
+                    </div>
+                    <button class="bg-grid-blue hover:bg-grid-dark-blue text-white px-6 py-3 rounded-md font-semibold transition-colors" data-event="click:handleViewPortfolio">
+                        View Full Portfolio
+                    </button>
+                </div>
+                <div class="relative">
+                    <!-- Large scale electrical power distribution network with high voltage transmission lines -->
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Large scale electrical power distribution network" class="rounded-xl shadow-lg w-full h-auto">
+                </div>
+            </div>
+
+            <!-- Featured Projects -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <!-- Major industrial power plant with cooling towers and electrical infrastructure -->
+                    <img src="https://pixabay.com/get/gaa9c6e5116b0e32898bf5848abd6157ca6314be996ecbff9554c8ddf35569571635d73743be6e94b346972079db32fcc575e4c739118e6ec0f8a64ee0c0ef08d_1280.jpg" alt="Industrial power plant with cooling towers" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-grid-dark-blue mb-3">Industrial Power Plant</h3>
+                        <p class="text-gray-600 mb-4">Complete electrical design and installation for 500MW combined cycle power generation facility.</p>
+                        <div class="flex items-center text-grid-blue font-semibold">
+                            <span>View Case Study</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <!-- Modern office building complex with electrical systems and infrastructure -->
+                    <img src="https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" alt="Modern office building complex with electrical infrastructure" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-grid-dark-blue mb-3">Commercial Complex</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive electrical infrastructure design for 50-story mixed-use development project.</p>
+                        <div class="flex items-center text-grid-blue font-semibold">
+                            <span>View Case Study</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <!-- Large scale solar panel installation with electrical grid connections -->
+                    <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" alt="Large scale solar panel installation with grid connections" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-grid-dark-blue mb-3">Solar Farm Integration</h3>
+                        <p class="text-gray-600 mb-4">Grid integration and electrical design for 100MW utility-scale solar photovoltaic facility.</p>
+                        <div class="flex items-center text-grid-blue font-semibold">
+                            <span>View Case Study</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Experience & Portfolio Section -->
+
+    <!-- @COMPONENT: Contact & CTA Section -->
+    <section class="py-20 bg-white" id="contact">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-grid-dark-blue mb-4">Ready to Start Your Project?</h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+                    Let's discuss how our power engineering expertise can help bring your project to life. Contact us today for a consultation.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-grid-light-gray rounded-xl p-8">
+                    <h3 class="text-2xl font-bold text-grid-dark-blue mb-6">Get a Free Consultation</h3>
+                    <form class="space-y-6" data-event="submit:handleContactForm">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-grid-blue focus:border-grid-blue" data-mock="true" placeholder="John">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-grid-blue focus:border-grid-blue" data-mock="true" placeholder="Doe">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-grid-blue focus:border-grid-blue" data-mock="true" placeholder="john.doe@company.com">
+                        </div>
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company</label>
+                            <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-grid-blue focus:border-grid-blue" data-mock="true" placeholder="Company Name">
+                        </div>
+                        <div>
+                            <label for="projectType" class="block text-sm font-medium text-gray-700 mb-2">Project Type</label>
+                            <select id="projectType" name="projectType" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-grid-blue focus:border-grid-blue" data-mock="true">
+                                <option>Select Project Type</option>
+                                <option>Power Generation</option>
+                                <option>Industrial Electrical</option>
+                                <option>Renewable Energy</option>
+                                <option>Infrastructure Design</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Project Details</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-grid-blue focus:border-grid-blue" data-mock="true" placeholder="Please describe your project requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-grid-blue hover:bg-grid-dark-blue text-white px-6 py-3 rounded-md font-semibold transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-grid-dark-blue mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-grid-blue rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-grid-dark-blue">Our Office</h4>
+                                    <p class="text-gray-600" data-mock="true">123 Engineering Plaza<br>Suite 456<br>Houston, TX 77002</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-grid-blue rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-grid-dark-blue">Phone</h4>
+                                    <p class="text-gray-600" data-mock="true">(555) 123-4567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-grid-blue rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-grid-dark-blue">Email</h4>
+                                    <p class="text-gray-600" data-mock="true">info@gridflow.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-grid-blue rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-clock text-white"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-grid-dark-blue">Business Hours</h4>
+                                    <p class="text-gray-600" data-mock="true">Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Emergency Contact -->
+                    <div class="bg-red-50 border border-red-200 rounded-xl p-6">
+                        <h4 class="text-lg font-semibold text-red-800 mb-2">24/7 Emergency Support</h4>
+                        <p class="text-red-700 mb-3">For critical power system emergencies, our on-call engineers are available around the clock.</p>
+                        <p class="text-red-800 font-semibold" data-mock="true">Emergency Hotline: (555) 911-POWER</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact & CTA Section -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="text-2xl font-bold text-white mb-4">Grid Flow</div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Your trusted partner in power engineering solutions. Delivering comprehensive electrical infrastructure and power systems engineering with over two decades of industry expertise.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-grid-blue rounded-lg flex items-center justify-center hover:bg-grid-dark-blue transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-grid-blue rounded-lg flex items-center justify-center hover:bg-grid-dark-blue transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-grid-blue rounded-lg flex items-center justify-center hover:bg-grid-dark-blue transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#projects" class="text-gray-300 hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Electrical Engineering</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Infrastructure Design</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Renewable Integration</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Industrial Projects</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Safety & Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">&copy; 2024 Grid Flow. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        (function() {
+            // Mobile menu toggle functionality
+            const mobileMenuButton = document.querySelector('[data-event="click:toggleMobileMenu"]');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Form submission handling (placeholder)
+            const contactForm = document.querySelector('[data-event="submit:handleContactForm"]');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // TODO: Implement form submission logic
+                    alert('Thank you for your inquiry! We will contact you within 24 hours.');
+                });
+            }
+
+            // Button click handlers (placeholders)
+            document.querySelectorAll('[data-event^="click:"]').forEach(button => {
+                if (!button.hasAttribute('data-handler-attached')) {
+                    button.addEventListener('click', function(e) {
+                        const event = this.getAttribute('data-event');
+                        console.log('Button clicked:', event);
+                        // TODO: Implement specific button functionalities
+                    });
+                    button.setAttribute('data-handler-attached', 'true');
+                }
+            });
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe service cards and other animated elements
+            document.querySelectorAll('.shadow-lg').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        })();
+    </script>
+</body>
+</html>
